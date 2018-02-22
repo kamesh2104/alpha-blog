@@ -16,3 +16,29 @@ $navbar-default-bg:rgb(136, 188, 236);
 .center{
     text-align: center;
 }
+.jumbotron{
+    background-image: asset-url('back_logo.jpg');
+    background-size: cover;
+    height:500px;
+    // object-fit: cover;
+}
+.jumbotron h1{
+    color: wheat;
+}
+footer{
+    margin:40px 10px;
+    padding-top:5px;
+    border-top:1px solid wheat;
+}
+
+footer small{
+    float:left;
+    color: turquoise;
+    font-size: 15px;
+}
+
+footer ul{
+    float: right;
+    list-style-type: none;
+    font-size: 15px;
+}
