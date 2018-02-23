@@ -1,15 +1,6 @@
-
-<% if @article.errors.any?%>>
-<h2> The following errors prevent the article from getting generated.</h2>
-<ul>
-   <% @article.errors.full_messages.each do |msg|%>
-     <li> <%= msg %> </li>
-   <% end %>
-</ul>
-<% end %>
-
-<%= form_for( @article , :html => {class:"form-horizontal" ,role: "form"}) do |f|%>
-  <div class ="row">
+<%= render 'shared/errors' , obj: @article %>
+ <div class ="row">
+    <%= form_for( @article , :html => {class:"form-horizontal" ,role: "form"}) do |f|%>
      <div class="form-group">
        <div class ="control -label col-sm-2">
          <%= f.label :title%>
@@ -37,4 +28,6 @@
   </div>
 
 <% end %>
-<%= link_to "show Articles" , articles_path%>
+     <div class="col-xs-4 col-xs-offset-4">
+      [ <%= link_to " cancel request and return to show Articles" , articles_path%> ]
+     </div>
